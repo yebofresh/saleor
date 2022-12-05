@@ -202,7 +202,7 @@ unidecode==1.2.0; python_version >= "2.7" and python_full_version < "3.0.0" or p
 urllib3==1.26.4; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.6.0" and python_version < "3.10"
 uvicorn==0.13.4
 uvloop==0.15.2; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "PyPy" and python_version >= "3.7"
-vcrpy==4.1.1; python_version >= "3.5"
+vcrpy==4.2.1; python_version >= "3.5"
 vine==5.0.0; python_version >= "3.6"
 virtualenv==20.4.6; python_full_version >= "3.6.1"
 watchgod==0.7; python_version >= "3.5"
