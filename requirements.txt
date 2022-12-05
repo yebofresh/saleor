@@ -89,7 +89,7 @@ opentracing==2.4.0
 packaging==20.9; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.6.0" and python_version >= "3.6"
 petl==1.7.4; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.4.0")
 phonenumberslite==8.12.22
-pillow==8.2.0; python_version >= "3.6"
+pillow==9.3.0; python_version >= "3.6"
 prices==1.1.0
 promise==2.3
 prompt-toolkit==3.0.18; python_full_version >= "3.6.1" and python_version >= "3.6"
