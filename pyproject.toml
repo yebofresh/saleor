@@ -77,7 +77,7 @@ documentation = "https://docs.saleor.io/"
 
     [tool.poetry.dependencies.uvicorn]
     extras = [ "standard" ]
-    version = "^0.19.0"
+    version = "^0.20.0"
 
     [tool.poetry.dependencies.celery]
     version = ">=4.4.5,<6.0.0"
