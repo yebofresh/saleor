@@ -718,6 +718,7 @@ BUILTIN_PLUGINS = [
 gw_prefix = "saleor.payment.gateways."
 EXTERNAL_PLUGINS = [
     f"{gw_prefix}shop2shop.plugin.Shop2ShopGatewayPlugin",
+    f"{gw_prefix}shop2shop.plugin.A2PayGatewayPlugin",
     f"{gw_prefix}kazang.plugin.KazangGatewayPlugin",
     f"{gw_prefix}flash.plugin.FlashGatewayPlugin",
     f"{gw_prefix}credit_card_on_delivery.plugin.CreditCardOnDeliveryGatewayPlugin"
