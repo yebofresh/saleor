@@ -26,8 +26,8 @@ RUN apt-get update \
   libpango-1.0-0 \
   libpangocairo-1.0-0 \
   libssl3 \
-  libtiff5 \
-  libwebp6 \
+  libtiff6 \
+  libwebp7 \
   libxml2 \
   libpq5 \
   shared-mime-info \
