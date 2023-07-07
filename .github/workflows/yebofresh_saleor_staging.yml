@@ -16,6 +16,7 @@ env:
   GITHUB_SHA: ${{ github.sha }}
   IMAGE: saleor-core-staging
   REGISTRY_HOSTNAME: eu.gcr.io
+  GS_MEDIA_BUCKET_NAME: saleor-assets-staging
 
 jobs:
   setup-build-publish:
@@ -55,6 +56,7 @@ jobs:
           --build-arg GITHUB_REF="$GITHUB_REF" \
           --build-arg GS_JSON_ARG="$GS_JSON" \
           --build-arg GAC_FILE="$GAC_FILENAME" \
+          --build-arg GS_MEDIA_BUCKET_NAME="$GS_MEDIA_BUCKET_NAME" \
           --build-arg SALEOR_SECRET_ARG="$SALEOR_SECRET" .
 
 
