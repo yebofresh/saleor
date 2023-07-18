@@ -169,6 +169,7 @@ class User(
     note = models.TextField(null=True, blank=True)
     date_joined = models.DateTimeField(default=timezone.now, editable=False)
     updated_at = models.DateTimeField(auto_now=True, db_index=True)
+    last_password_reset_request = models.DateTimeField(null=True, blank=True)
     default_shipping_address = models.ForeignKey(
         Address, related_name="+", null=True, blank=True, on_delete=models.SET_NULL
     )
@@ -395,6 +396,8 @@ class Group(models.Model):
         verbose_name="permissions",
         blank=True,
     )
+    restricted_access_to_channels = models.BooleanField(default=False)
+    channels = models.ManyToManyField("channel.Channel", blank=True)
 
     objects = GroupManager()
 

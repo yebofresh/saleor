@@ -25,9 +25,9 @@ RUN apt-get update \
   libopenjp2-7 \
   libpango-1.0-0 \
   libpangocairo-1.0-0 \
-  libssl1.1 \
-  libtiff5 \
-  libwebp6 \
+  libssl3 \
+  libtiff6 \
+  libwebp7 \
   libxml2 \
   libpq5 \
   shared-mime-info \
@@ -55,7 +55,9 @@ ARG SALEOR_SECRET_ARG
 ENV SALEOR_SECRET=$SALEOR_SECRET_ARG
 ARG GS_JSON_ARG
 ENV GS_JSON=$GS_JSON_ARG
-RUN SECRET_KEY=${SALEOR_SECRET_ARG} GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS} GS_JSON=${GS_JSON_ARG} python3 manage.py shell < ./build-scripts/gs_credentials_create.py
+ARG GS_MEDIA_BUCKET_NAME
+ENV GS_MEDIA_BUCKET_NAME=$GS_MEDIA_BUCKET_NAME
+RUN GS_MEDIA_BUCKET_NAME=${GS_MEDIA_BUCKET_NAME} SECRET_KEY=${SALEOR_SECRET_ARG} GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS} GS_JSON=${GS_JSON_ARG} python3 manage.py shell < ./build-scripts/gs_credentials_create.py
 
 ARG STATIC_URL
 ENV STATIC_URL ${STATIC_URL:-/static/}
