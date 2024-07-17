@@ -2,6 +2,9 @@
 This is a script for creating the Google credentials file required
 for Google Cloud Storage. This is run during the docker build that
 is triggered by a Github action when a PR is merged.
+
+TODO: This is not an ideal way to handle setting up storage
+      credentials, should look into alternatives.
 """
 
 
